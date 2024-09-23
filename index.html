@@ -7,17 +7,18 @@
     <title>Lucas Summers</title>
   </head>
   <style>
-    .pdf {
-        width: 100%;
-	border: none;
-	frameborder: 0;
-    }
-    .pdf,
+    #Resume,
     html,
     body {
         height: 100%;
         margin: 0;
         padding: 0;
+    }
+    #Resume {
+	aspect-ratio: 4/3;
+        width: 100%;
+	border: none;
+	frameborder: 0;
     }
   </style>
   <body>
@@ -25,11 +26,12 @@
 	<h3><a rel="external" href="resume.pdf">Click here to download my resume</a></h3>
 	<!--<iframe id="Resume" class="pdf" src="http://docs.google.com/gview?embedded=true&url=https://lucas-summers.github.io/resume.pdf"></iframe>-->
 
-	<iframe id="Resume" class="pdf" src="resume.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+	<iframe id="Resume" src="resume.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
     </main>
     <script>
     document.getElementById("Resume").contentWindow.onload = function() {
 	this.document.getElementsByTagName("img")[0].style.width="100%";
+	this.document.getElementsByTagName("img")[0].style.height="100%";
     };
     </script>
   </body>
