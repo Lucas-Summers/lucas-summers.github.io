@@ -1,10 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lucas Summers</title>
+  </head>
+  <style>
+    .pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+	border: none;
+	frameborder: 0;
+    }
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+  </style>
+  <body>
+    <main>
+	<h3><a rel="external" href="resume.pdf">Click here to download my resume</a></h3>
+	<!--<iframe id="Resume" class="pdf" src="http://docs.google.com/gview?embedded=true&url=https://lucas-summers.github.io/resume.pdf"></iframe>-->
 
-<h3><a rel="external" href="resume.pdf">Click here to download my resume</a></h3>
-<iframe id="Resume" src="http://docs.google.com/gview?embedded=true&url=https://lucas-summers.github.io/resume.pdf" frameborder="0" width="100%" height="100%" border="none"></iframe>
-
-<!--<iframe id="Resume" src="resume.pdf" style="height:100%; width:100%; border:none;" frameborder="0"></iframe>-->
-<script>
-document.getElementById("Resume").contentWindow.onload = function() {
-    this.document.getElementsByTagName("img")[0].style.width="100%";
-};
-</script>
+	<iframe id="Resume" class="pdf" src="resume.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+    </main>
+    <script>
+    document.getElementById("Resume").contentWindow.onload = function() {
+	this.document.getElementsByTagName("img")[0].style.width="100%";
+    };
+    </script>
+  </body>
+</html>
